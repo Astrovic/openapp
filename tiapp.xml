@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+	<id>openapp.astrovicapp.com</id>
+	<name>openapp</name>
+	<version>1.0</version>
+	<publisher>not specified</publisher>
+	<url/>
+	<description/>
+	<copyright>not specified</copyright>
+	<icon>appicon.png</icon>
+	<fullscreen>false</fullscreen>
+	<navbar-hidden>false</navbar-hidden>
+	<guid>03992b3c-481b-44bf-a9d9-1bdc67ed2ea2</guid>
+	<property name="ti.ui.defaultunit" type="string">dp</property>
+	<property name="run-on-main-thread" type="bool">true</property>
+	<android xmlns:android="http://schemas.android.com/apk/res/android">
+		<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1">
+			<application android:largeHeap="true">
+				<!--activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiActivity" android:screenOrientation="portrait" android:launchMode="singleTop"/-->        
+				<activity android:name=".OpenappActivity" android:exported="true" android:launchMode="singleTop">
+					<intent-filter>
+						<action android:name="android.intent.action.VIEW"/>
+						<category android:name="android.intent.category.DEFAULT"/>
+						<category android:name="android.intent.category.BROWSABLE"/>
+						<data android:scheme="openapp" android:host="some_data" />
+					</intent-filter>
+				</activity>
+			</application>
+		</manifest>
+	</android>
+	<modules>
+	</modules>
+	<deployment-targets>
+		<target device="android">true</target>
+		<target device="ipad">false</target>
+		<target device="iphone">false</target>
+	</deployment-targets>
+	<sdk-version>11.1.1.GA</sdk-version>
+<plugins><plugin version="1.0">ti.alloy</plugin>
+</plugins>
+</ti:app>
