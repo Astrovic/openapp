@@ -1,5 +1,5 @@
 <Alloy>
 	<Window class="container">
-		<Label id="label" onClick="doClick">Open red window</Label>
+		<Label id="label" onClick="doClick">Open blue window</Label>
 	</Window>
 </Alloy>
